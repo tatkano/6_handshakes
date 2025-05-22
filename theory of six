@@ -41,8 +41,8 @@ def find_path(nachal_url, final_url, limit):
             true_limit = true_limit + 1
               # Проверка rate-limit
             if true_limit >= limit:
-                print(f'Число подключений к Википедии достигло предельного значения {limit}, перерыв 2 секунды')  
-                time.sleep(2)  
+                print(f'Число подключений к Википедии достигло предельного значения {limit}, перерыв 3 секунды')  
+                time.sleep(3)  
                 true_limit = 0  
             for link in links:
                 if link not in visited:
