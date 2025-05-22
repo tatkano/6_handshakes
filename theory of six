@@ -6,7 +6,6 @@ import time
 def extract_links(url):
     """Извлекаем все ссылки из статьи Википедии."""
     response = requests.get(url)
-    response.raise_for_status() 
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # Найдем все ссылки в основном блоке и блоке References
