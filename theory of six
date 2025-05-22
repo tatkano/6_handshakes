@@ -63,11 +63,11 @@ def main(url10, url20, limit1):
     rez1 = find_path(url10, url20, limit1)
     rez2 = find_path(url20, url10, limit1)
     if rez1:
-        print(f'Путь между ссылками url1 => {rez1} => url2')
+        print(f'Путь между ссылками {rez1}')
     else:
         print('Не удалось найти путь между ссылками url1 и url2')
     if rez2:
-        print(f'Путь между ссылками url2 => {rez2} => url1')
+        print(f'Путь между ссылками {rez2}')
     else:
         print('Не удалось найти путь между ссылками url2 и url1')
 
