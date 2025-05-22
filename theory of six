@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from collections import deque
 import time
 
 def extract_links(url):
@@ -40,8 +39,8 @@ def find_path(nachal_url, final_url, limit):
             true_limit = true_limit + 1
               # Проверка rate-limit
             if true_limit >= limit:
-                print(f'Число подключений к Википедии достигло предельного значения {limit}, перерыв 3 секунды')  
-                time.sleep(3)  
+                print(f'Число подключений к Википедии достигло предельного значения {limit}, делаем перерыв')  
+                time.sleep(1)  
                 true_limit = 0  
             for link in links:
                 if link not in visited:
