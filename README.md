@@ -39,4 +39,4 @@ url1 =>[url] => [url] =>url2
 
 ------------------------------------
 
-Ссылка на страницу с Google Colab с результатом выполнения скрипта: https://colab.research.google.com/drive/1mV9Kplkyl2DAv52_XXVbNe_YqA2zdDUI#scrollTo=wfO8faq6ZSPR
+Ссылка на страницу Google Colab с результатом выполнения скрипта: https://colab.research.google.com/drive/1mV9Kplkyl2DAv52_XXVbNe_YqA2zdDUI#scrollTo=wfO8faq6ZSPR
