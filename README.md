@@ -40,4 +40,5 @@ url1 =>[url] => [url] =>url2
 ------------------------------------
 
 Ссылка на страницу Google Colab с результатом выполнения скрипта: https://colab.research.google.com/drive/1mV9Kplkyl2DAv52_XXVbNe_YqA2zdDUI#scrollTo=wfO8faq6ZSPR
+
 Исполняемый файл 6-handshakes.exe приложен в качестве самостоятельной программы, для вывода результата можно запустить его.
