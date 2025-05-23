@@ -31,7 +31,15 @@ def find_path(nachal_url, final_url, limit):
 
     while ochered:
         true_url, path = ochered.pop()
-        print(f'Проверяем ссылку {true_url} из доступного пути {path}')  
+        #print(f'Проверяем ссылку {true_url} из доступного пути {path}') 
+            # Проверка завершения поиска
+        if true_url == final_url:
+            return path
+            # Проверка числа переходов
+        depth = len(path)        
+        if depth >= 5:
+            #print(f"Переходов между ссылками больше 5") 
+            continue         
               # Получаем ссылки с текущей страницы
         if true_url not in visited:
             visited.add(true_url)
@@ -39,33 +47,26 @@ def find_path(nachal_url, final_url, limit):
             true_limit = true_limit + 1
               # Проверка rate-limit
             if true_limit >= limit:
-                print(f'Число подключений к Википедии достигло предельного значения {limit}, делаем перерыв')  
+                #print(f'Число подключений к Википедии достигло предельного значения {limit}, делаем перерыв')  
                 time.sleep(1)  
                 true_limit = 0  
             for link in links:
                 if link not in visited:
               # Добавление ссылки в очередь
-                    print(f'Следующая ссылка {link} в очереди')  
+                    #print(f'Следующая ссылка {link} в очереди')  
                     ochered.append((link, path + [link]))
-              # Проверка завершения поиска
-        if true_url == final_url:
-            return path
-          # Проверка числа переходов
-        depth = len(path)        
-        if depth >= 5:
-            print(f"Переходов между ссылками больше 5") 
-            continue                  
+                        
     return None
 
 def main(url10, url20, limit1):
     rez1 = find_path(url10, url20, limit1)
     rez2 = find_path(url20, url10, limit1)
     if rez1:
-        print(f'Путь между ссылками от url1 к url2 {rez1}')
+        print(f'Путь между ссылками от url1 к url2   {rez1}')
     else:
         print('Не удалось найти путь между ссылками url1 и url2')
     if rez2:
-        print(f'Путь между ссылками от url2 к url1 {rez2}')
+        print(f'Путь между ссылками от url2 к url1   {rez2}')
     else:
         print('Не удалось найти путь между ссылками url2 и url1')
 
