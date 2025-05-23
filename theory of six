@@ -74,7 +74,7 @@ def main(url10, url20, limit1):
 
 # Основная программа
 if __name__ == "__main__":
-    print('Программа выполняет поиск переходов между двумя ссылками (не более шести переходов)')
+    print('Программа выполняет поиск переходов между двумя ссылками (не более пяти переходов)')
     print('Первая ссылка url1 = https://en.wikipedia.org/wiki/Six_degrees_of_separation')
     print('Вторая ссылка url2 = https://en.wikipedia.org/wiki/American_Broadcasting_Company')
     url1 = "https://en.wikipedia.org/wiki/Six_degrees_of_separation"
