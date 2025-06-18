@@ -25,14 +25,14 @@ def extract_links(url):
 
 def find_path(nachal_url, final_url, limit):
     """Находим путь между двумя ссылками"""
-       # Создается список, где значение ссылки хранится совместно со значением пути к ней (тоже в списке)
-    ochered = [(nachal_url, [nachal_url])]
+       # Создается очередь, где значение ссылки хранится совместно со значением пути к ней (в списке)
+    queue = [(nachal_url, [nachal_url])]
     visited = set()
     true_limit = 0
 
-    while ochered:
+    while queue:
             # Выбираем текущую ссылку и путь к ней, после чего их удаляем из очереди проверки 
-        true_url, path = ochered.pop()
+        true_url, path = queue.pop()
             # Проверка завершения поиска
         if true_url == final_url:
             return path
@@ -53,7 +53,7 @@ def find_path(nachal_url, final_url, limit):
             for link in links:
                 if link not in visited:
               # Добавление ссылки, если она не проверялась, с текущей страницы в очередь
-                    ochered.append((link, path + [link]))
+                    queue.append((link, path + [link]))
                         
     return None
 
